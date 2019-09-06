@@ -1,0 +1,12 @@
+<h1>House Members</h1>
+
+<% facade.members.map do |member| %>
+<section class='member'>
+  <div class="name">
+    <p>Name: <%= member.name %></p>
+  </div>
+  <div class="id">
+    <p>ID: <%= member.id %></p>
+  </div>
+</section>
+<% end %>

@@ -1,8 +1,5 @@
-And I select "Greyjoy" from the dropdown
+#And I select "Greyjoy" from the dropdown
 
 <h1>Westeros Houses</h1>
 
-<%= form_tag "/houses", method: :post do %>
-	<%= collection_select(:houses, :selection, @houses, :id, :houses ) %><br>
-	<%= submit_tag 'Select' %>
-<% end %>
+<%= link_to "Greyjoy" %>

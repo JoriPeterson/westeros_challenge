@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def show
-    @houses = House.houses
+    @houses = House.new
   end
 end
