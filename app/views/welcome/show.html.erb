@@ -1,8 +1,6 @@
-#And I select "Greyjoy" from the dropdown
-
 <h1>Westeros Houses</h1>
 
-<%= form_tag search_path do %>
+<%= form_tag search_path, method: :get do %>
   <%= select_tag :house, options_for_select(@houses) %>
-  <%= submit_tag "Search Members"%>
+  <%= submit_tag "Get Members"%>
 <% end %>

@@ -5,7 +5,7 @@ class WesterosService
 	end
 
 	def members_by_house
-		get_json("/api/v1/house/#{house}")
+		get_json("/api/v1/house/#{@house}")
 	end
 
 	private

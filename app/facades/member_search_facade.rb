@@ -5,7 +5,7 @@ class MemberSearchFacade
   end
 
   def members
-    services.members_by_house[:house].map do |result|
+    services.members_by_house[:data].map do |result|
       Member.new(result)
     end
   end
@@ -13,6 +13,6 @@ class MemberSearchFacade
   private
 
   def services
-    @_services ||= WesterosService.new(house)
+    @_services ||= WesterosService.new(@house)
   end
 end
