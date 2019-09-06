@@ -9,8 +9,8 @@ describe "Members of a house" do
 
     click_on "Get Members"
 
-    expect(current_path).to eq("/search?house=greyjoy")
-    expect(page).to have_content("House Greyjoy")
+    expect(current_path).to eq("/search")
+    expect(page).to have_content("Greyjoy")
     expect(page).to_not have_content("House Stark")
     expect(page).to have_css(".member", count: 7)
     within(first(".member")) do

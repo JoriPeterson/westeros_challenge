@@ -1,8 +1,8 @@
 class Member
-  attr_reader :name, :id
 
   def initialize(results = {})
-    @name = results[:name]
-    @id = results[:id]
-  end  
+    @members = results[:attributes][:members]
+    @name = @members.map { |member| member[:name]}
+    @id = @members.map { |member| member[:id]}
+  end
 end
