@@ -5,7 +5,7 @@ class MemberSearchFacade
   end
 
   def members
-    services.members_by_house[:data].map do |result|
+    services.members_by_house[:data][0][:attributes][:members].map do |result|
       Member.new(result)
     end
   end
